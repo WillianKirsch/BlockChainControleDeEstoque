@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BlockChain.Entidades.Bloco>
+
+@{
+    ViewData["Title"] = "BlockChain";
+}
+
+<h1>@ViewData["Title"]</h1>
+<h3>@ViewData["Mensagem"]</h3>
+
+<h2>Listagem</h2>
+
+<p>
+    <a asp-action="CriarTransacoes">Nova transação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Altura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chave)
+            </th>
+            <th>
+                Chave do bloco anterior
+            </th>
+            <th>
+                Criado em
+            </th>
+            <th>
+                Ações
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChaveBlocoAnterior)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CriadoEm)
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.deps.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.runtimeconfig.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.runtimeconfig.dev.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Servico.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\bin\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csprojAssemblyReference.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csproj.CoreCompileInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.AssemblyInfoInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.AssemblyInfo.cs
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csproj.CopyComplete
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.pdb

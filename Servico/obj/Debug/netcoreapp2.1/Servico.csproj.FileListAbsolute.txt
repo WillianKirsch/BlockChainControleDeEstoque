@@ -1,0 +1,14 @@
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\Servico.deps.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\Servico.runtimeconfig.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\Servico.runtimeconfig.dev.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\Servico.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\bin\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.csprojAssemblyReference.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.csproj.CoreCompileInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.AssemblyInfoInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.AssemblyInfo.cs
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.csproj.CopyComplete
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.pdb

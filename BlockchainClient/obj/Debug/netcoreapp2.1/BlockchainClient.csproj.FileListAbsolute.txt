@@ -1,0 +1,7 @@
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\bin\Debug\netcoreapp2.1\Servico.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\bin\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\obj\Debug\netcoreapp2.1\BlockchainClient.csprojAssemblyReference.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\obj\Debug\netcoreapp2.1\BlockchainClient.csproj.CoreCompileInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\obj\Debug\netcoreapp2.1\BlockchainClient.AssemblyInfoInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockchainClient\obj\Debug\netcoreapp2.1\BlockchainClient.AssemblyInfo.cs

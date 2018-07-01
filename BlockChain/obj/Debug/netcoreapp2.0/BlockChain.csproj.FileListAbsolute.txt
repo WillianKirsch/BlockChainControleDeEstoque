@@ -1,0 +1,11 @@
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\bin\Debug\netcoreapp2.0\BlockChain.deps.json
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\bin\Debug\netcoreapp2.0\BlockChain.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\bin\Debug\netcoreapp2.0\BlockChain.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.Documentacao.Dicionario.resources
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.csproj.GenerateResource.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.csproj.CoreCompileInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.AssemblyInfoInputs.cache
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.AssemblyInfo.cs
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.dll
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.pdb
+C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.0\BlockChain.csprojAssemblyReference.cache

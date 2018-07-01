@@ -1,0 +1,59 @@
+﻿@model BlockChain.Entidades.Bloco
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Bloco - Altura @Html.DisplayFor(model => model.Altura)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Altura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Altura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Prova)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Chave)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chave)
+        </dd>
+        <dt>
+            Chave do bloco anterior
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChaveBlocoAnterior)
+        </dd>
+        <dt>
+            Chave do próximo bloco
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChaveBlocoSucessor)
+        </dd>
+        <dt>
+            Criado em
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CriadoEm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bits)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Voltar para listagem</a>
+</div>
