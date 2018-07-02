@@ -3604,23 +3604,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FlashThink\\.nuget\\packages\\": {},
+    "C:\\Users\\Willian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj",
+      "projectUniqueName": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Servico\\Servico.csproj",
       "projectName": "Servico",
-      "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj",
-      "packagesPath": "C:\\Users\\FlashThink\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\obj\\",
+      "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Servico\\Servico.csproj",
+      "packagesPath": "C:\\Users\\Willian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Servico\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\FlashThink\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Willian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3633,8 +3633,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj": {
-              "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj"
+            "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj": {
+              "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj"
             }
           }
         }

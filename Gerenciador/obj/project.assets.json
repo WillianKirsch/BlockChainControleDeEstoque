@@ -12788,7 +12788,7 @@
       ]
     },
     "System.Xml.XmlDocument/4.3.0": {
-      "sha512": "o/ha+P/CTY+jBCchE8qt68OQUoNNRQ/SDF05kR+X41Os/1s/rTXd4VbmxfPu6d0hp0G5VDUlZq9wtyvhLlkQpw==",
+      "sha512": "LqFMHsBoO0M+6GDVUwTcutbqS+idJyaeBewDbgf0EUKyqi0TcXiIsjuTrDtuUEvyPben6/bAIqAMtRSpXl1MCg==",
       "type": "package",
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
@@ -13011,23 +13011,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FlashThink\\.nuget\\packages\\": {},
+    "C:\\Users\\Willian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
+      "projectUniqueName": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Gerenciador\\Gerenciador.csproj",
       "projectName": "Gerenciador",
-      "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
-      "packagesPath": "C:\\Users\\FlashThink\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\obj\\",
+      "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Gerenciador\\Gerenciador.csproj",
+      "packagesPath": "C:\\Users\\Willian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Gerenciador\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\FlashThink\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Willian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13040,11 +13040,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj": {
-              "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj"
+            "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj": {
+              "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj"
             },
-            "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj": {
-              "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj"
+            "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Servico\\Servico.csproj": {
+              "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\Servico\\Servico.csproj"
             }
           }
         }
