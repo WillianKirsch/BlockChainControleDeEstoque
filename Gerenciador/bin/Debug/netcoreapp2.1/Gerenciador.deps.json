@@ -6872,7 +6872,7 @@
     "System.Xml.XmlDocument/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o/ha+P/CTY+jBCchE8qt68OQUoNNRQ/SDF05kR+X41Os/1s/rTXd4VbmxfPu6d0hp0G5VDUlZq9wtyvhLlkQpw==",
+      "sha512": "sha512-LqFMHsBoO0M+6GDVUwTcutbqS+idJyaeBewDbgf0EUKyqi0TcXiIsjuTrDtuUEvyPben6/bAIqAMtRSpXl1MCg==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },

@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using BlockChain.Infraestrutura;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using BlockChain.Infraestrutura;
 
 namespace BlockChain.Entidades
 {
@@ -24,17 +24,32 @@ namespace BlockChain.Entidades
         }
     }
 
-    public static class BlooExtensions
+    public static class BlocoExtensions
     {
+        public static Bloco ObterParaChave(this Bloco bloco)
+        {
+            Bloco blocoParaChave = new Bloco
+            {
+                Altura = bloco.Altura,
+                ChaveBlocoAnterior = bloco.ChaveBlocoAnterior,
+                CriadoEm = bloco.CriadoEm,
+                Transacoes = bloco.Transacoes
+            };
+
+            return blocoParaChave;
+        }
+
         public static int ObterBits(this Bloco bloco)
         {
-            string blocoEmTexto = JsonConvert.SerializeObject(bloco);
+            Bloco blocoParaChave = bloco.ObterParaChave();
+            string blocoEmTexto = JsonConvert.SerializeObject(blocoParaChave);
             return blocoEmTexto.Length;
         }
 
         public static string ObterChave(this Bloco bloco)
         {
-            string blocoEmTexto = JsonConvert.SerializeObject(bloco);
+            Bloco blocoParaChave = bloco.ObterParaChave();
+            string blocoEmTexto = JsonConvert.SerializeObject(blocoParaChave);
             return Criptografia.ObterSha256(blocoEmTexto);
         }
     }

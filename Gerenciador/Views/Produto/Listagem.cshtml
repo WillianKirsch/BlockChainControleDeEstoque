@@ -1,0 +1,67 @@
+﻿@model IEnumerable<BlockChain.Entidades.Produto>
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Listagem</h3>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-form">
+                <a class="btn btn-primary" asp-action="Cadastro">Novo produto</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Codigo)
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="col-md-3">
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td class="col-md-6">
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td class="col-md-3">
+                        <div class="btn-group" role="group" aria-label="...">
+                            @Html.ActionLink("Editar", "Edicao", "Produto", new { id = item.Id }, new { @class = "btn btn-default" })
+                            @Html.ActionLink("Detalhes", "Detalhes", "Produto", new { id = item.Id }, new { @class = "btn btn-default" })
+                            @Html.ActionLink("Excluir", "Exclusao", "Produto", new { id = item.Id }, new { @class = "btn btn-default" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="card text-center">
+        <div class="card-header">
+            <h4>Nenhum produto cadastrado</h4>
+        </div>
+    </div>
+}

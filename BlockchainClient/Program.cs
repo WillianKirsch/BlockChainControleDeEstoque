@@ -15,8 +15,8 @@ namespace BlockchainClient
 
             Configuration = builder.Build();
 
-            var cadeia = new CadeiaDeBloco();
-            var server = new WebServer(cadeia);
+            //var cadeia = new CadeiaDeBloco();
+            //var server = new WebServer(cadeia);
             System.Console.Read();
         }
     }

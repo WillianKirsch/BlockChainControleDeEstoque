@@ -2,7 +2,6 @@
 using BlockChain.Entidades.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Servico.Servicos;
 using System.Collections.Generic;
 
 namespace Gerenciador.Controllers
@@ -18,8 +17,6 @@ namespace Gerenciador.Controllers
         // GET: Blockchain
         public IActionResult Listagem()
         {
-            ViewData["Mensagem"] = "Todos os blocos da blockchain";
-
             IEnumerable<Bloco> cadeiaCompleta = _servico.ObterCadeiaCompleta();
             return View(cadeiaCompleta);
         }
@@ -31,16 +28,16 @@ namespace Gerenciador.Controllers
             return View(bloco);
         }
 
-        // GET: Blockchain/CriarTransacoes
-        public ActionResult CriarTransacoes()
+        // GET: Blockchain/CriarBloco
+        public ActionResult CriarBloco()
         {
             return View();
         }
 
-        // POST: Blockchain/CriarTransacoes
+        // POST: Blockchain/CriarBloco
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CriarTransacoes(IFormCollection collection)
+        public ActionResult CriarBloco(Bloco bloco)
         {
             try
             {
@@ -52,6 +49,24 @@ namespace Gerenciador.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Consenso()
+        {
+            TempData["MensagemInfo"] = _servico.Consenso();
+            return RedirectToAction(nameof(Listagem));
+        }
+
+        public ActionResult ValidarCadeia()
+        {
+            TempData["MensagemInfo"] = _servico.ValidarCadeia();
+            return RedirectToAction(nameof(Listagem));
+        }
+
+        public ActionResult RevalidarBloco(int id)
+        {
+            TempData["MensagemInfo"] = _servico.RevalidarBloco(id);
+            return RedirectToAction(nameof(Listagem));
         }
     }
 }

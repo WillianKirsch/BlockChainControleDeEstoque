@@ -7,6 +7,7 @@ namespace Servico.BancoDeDados.Map
     {
         public TransacaoMap(EntityTypeBuilder<Transacao> entityBuilder)
         {
+            entityBuilder.HasKey(m => m.Id);
             entityBuilder.Property(entidade => entidade.Destinatario).HasMaxLength(400);
             entityBuilder.Property(entidade => entidade.Remetente).HasMaxLength(400);
         }

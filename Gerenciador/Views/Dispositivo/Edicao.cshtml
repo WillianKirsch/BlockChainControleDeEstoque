@@ -1,0 +1,32 @@
+﻿@model BlockChain.Entidades.DispositivoNo
+
+@{
+    ViewData["Title"] = "Dispositivo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Edição</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edicao">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" class="form-control" />
+          
+            <div class="form-group">
+                <label class="control-label">Endereço (Url)</label>
+                <input asp-for="EnderecoUrl" class="form-control" />
+                <span asp-validation-for="EnderecoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class="btn btn-default" asp-action="Listagem">Voltar para listagem</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

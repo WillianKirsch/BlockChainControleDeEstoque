@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BlockChain.Entidades.DispositivoNo>
+
+@{
+    ViewData["Title"] = "Dispositivo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Listagem</h3>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-form">
+                <a class="btn btn-primary" asp-action="Cadastro">Novo dispositivo</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+@if (Model.Count() > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Endereço (Url)
+                </th>
+
+                <th>
+                    Está inacessível?
+                </th>
+                <th>
+                    Motivo da inacessibilidade
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td class="col-md-5">
+                    @Html.DisplayFor(modelItem => item.EnderecoUrl)
+                </td>
+
+                <td class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Inacessivel)
+                </td>
+                <td class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.Erro)
+                </td>
+
+                <td class="col-md-3">
+                    <div class="btn-group" role="group" aria-label="...">
+                        @Html.ActionLink("Editar", "Edicao", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Detalhes", "Detalhes", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Excluir", "Exclusao", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="card text-center">
+        <div class="card-header">
+            <h4>Nenhum dispositivo cadastrado</h4>
+        </div>
+    </div>
+}

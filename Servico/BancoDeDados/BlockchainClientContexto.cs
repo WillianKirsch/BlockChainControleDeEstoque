@@ -1,5 +1,6 @@
 ﻿using BlockChain.Entidades;
 using Microsoft.EntityFrameworkCore;
+using Servico.BancoDeDados.Map;
 
 namespace Servico.BancoDeDados
 {
@@ -11,13 +12,18 @@ namespace Servico.BancoDeDados
         public DbSet<Bloco> Blocos { get; set; }
         public DbSet<DispositivoNo> Dispositivos { get; set; }
         public DbSet<Transacao> Transacoes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<ItemTransacao> ItansTransacao { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Bloco>().HasKey(m => m.Id);
-            builder.Entity<DispositivoNo>().HasKey(m => m.Id);
-            builder.Entity<Transacao>().HasKey(m => m.Id);
             base.OnModelCreating(builder);
+
+            new BlocoMap(builder.Entity<Bloco>());
+            new DispositivoNoMap(builder.Entity<DispositivoNo>());
+            new TransacaoMap(builder.Entity<Transacao>());
+            new ProdutoMap(builder.Entity<Produto>());
         }
     }
 }

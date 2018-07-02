@@ -719,23 +719,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\FlashThink\\.nuget\\packages\\": {},
+    "C:\\Users\\Willian\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj",
+      "projectUniqueName": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj",
       "projectName": "BlockChain",
-      "projectPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj",
-      "packagesPath": "C:\\Users\\FlashThink\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\BlockChain\\obj\\",
+      "projectPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\BlockChain.csproj",
+      "packagesPath": "C:\\Users\\Willian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Willian\\GIT\\BlockChainControleDeEstoque\\BlockChain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\FlashThink\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Willian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

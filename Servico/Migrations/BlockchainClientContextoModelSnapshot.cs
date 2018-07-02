@@ -16,22 +16,27 @@ namespace Servico.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("BlockChain.Entidades.Bloco", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<long>("Altura");
 
                     b.Property<int>("Bits");
 
-                    b.Property<string>("Chave");
+                    b.Property<string>("Chave")
+                        .HasMaxLength(400);
 
-                    b.Property<string>("ChaveBlocoAnterior");
+                    b.Property<string>("ChaveBlocoAnterior")
+                        .HasMaxLength(400);
 
-                    b.Property<string>("ChaveBlocoSucessor");
+                    b.Property<string>("ChaveBlocoSucessor")
+                        .HasMaxLength(400);
 
                     b.Property<DateTime>("CriadoEm");
 
@@ -45,27 +50,73 @@ namespace Servico.Migrations
             modelBuilder.Entity("BlockChain.Entidades.DispositivoNo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("EnderecoUrl");
+                    b.Property<string>("EnderecoUrl")
+                        .HasMaxLength(400);
+
+                    b.Property<string>("Erro")
+                        .HasMaxLength(600);
+
+                    b.Property<bool>("Inacessivel");
 
                     b.HasKey("Id");
 
                     b.ToTable("Dispositivos");
                 });
 
-            modelBuilder.Entity("BlockChain.Entidades.Transacao", b =>
+            modelBuilder.Entity("BlockChain.Entidades.ItemTransacao", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BlocoId");
-
-                    b.Property<string>("Destinatario");
+                    b.Property<int>("ProdutoId");
 
                     b.Property<int>("Quantidade");
 
-                    b.Property<string>("Remetente");
+                    b.Property<int>("TransacaoId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.HasIndex("TransacaoId");
+
+                    b.ToTable("ItansTransacao");
+                });
+
+            modelBuilder.Entity("BlockChain.Entidades.Produto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Codigo")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Descricao")
+                        .HasMaxLength(400);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("BlockChain.Entidades.Transacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BlocoId");
+
+                    b.Property<string>("Destinatario")
+                        .HasMaxLength(400);
+
+                    b.Property<string>("Remetente")
+                        .HasMaxLength(400);
 
                     b.HasKey("Id");
 
@@ -74,11 +125,25 @@ namespace Servico.Migrations
                     b.ToTable("Transacoes");
                 });
 
+            modelBuilder.Entity("BlockChain.Entidades.ItemTransacao", b =>
+                {
+                    b.HasOne("BlockChain.Entidades.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("BlockChain.Entidades.Transacao", "Transacao")
+                        .WithMany("Transacoes")
+                        .HasForeignKey("TransacaoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("BlockChain.Entidades.Transacao", b =>
                 {
-                    b.HasOne("BlockChain.Entidades.Bloco")
+                    b.HasOne("BlockChain.Entidades.Bloco", "Bloco")
                         .WithMany("Transacoes")
-                        .HasForeignKey("BlocoId");
+                        .HasForeignKey("BlocoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

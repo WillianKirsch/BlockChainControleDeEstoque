@@ -1,32 +1,29 @@
 ﻿@model BlockChain.Entidades.Bloco
 
 @{
-    ViewData["Title"] = "Criar transações";
+    ViewData["Title"] = "Bloco";
 }
 
-<h2>Criar transações</h2>
+<h2>Cadastro</h2>
 
-<h4>Bloco</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CriarTransacoes">
+        <form asp-action="CriarBloco">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <div class="form-group">
-                <label asp-for="Altura" class="control-label"></label>
-                <input asp-for="Altura" class="form-control" />
-                <span asp-validation-for="Altura" class="text-danger"></span>
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
             </div>
+
 
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-default" />
+                <a class="btn btn-default" asp-action="Listagem">Voltar para listagem</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar para listagem</a>
 </div>
 
 @section Scripts {

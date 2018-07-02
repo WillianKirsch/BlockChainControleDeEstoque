@@ -1,10 +1,7 @@
-﻿using BlockChain.Entidades;
-using BlockChain.Entidades.Respostas;
-using System;
+﻿using BlockChain.Entidades.Respostas;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Servico.Servicos
+namespace BlockChain.Entidades.Interfaces
 {
     public interface IBlockchainServico
     {
@@ -12,6 +9,8 @@ namespace Servico.Servicos
         Bloco ObterBloco(int id);
         IEnumerable<Bloco> ObterCadeiaCompleta();
         string RegistrarDispositivoNos(string[] dispositivosNo);
-        ConsensoResposta Consenso();
+        string Consenso();
+        string ValidarCadeia();
+        string RevalidarBloco(int id);
     }
 }

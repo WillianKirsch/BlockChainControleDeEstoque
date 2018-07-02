@@ -40,6 +40,8 @@ namespace Gerenciador
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddTransient<IBlockchainServico, BlockchainServico>();
+            services.AddTransient<IProdutoServico, ProdutoServico>();
+            services.AddTransient<IDispositivoServico, DispositivoServico>();
 
             services.AddMvc();
         }
