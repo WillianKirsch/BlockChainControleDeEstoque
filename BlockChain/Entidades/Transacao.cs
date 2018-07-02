@@ -9,6 +9,6 @@ namespace BlockChain.Entidades
         public int BlocoId { get; set; }
         public virtual Bloco Bloco { get; set; }
 
-        public virtual ICollection<ItemTransacao> Transacoes { get; set; }
+        public virtual ICollection<ItemTransacao> Itens { get; set; }
     }
 }

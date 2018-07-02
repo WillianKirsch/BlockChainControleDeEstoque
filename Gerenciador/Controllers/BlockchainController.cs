@@ -50,7 +50,7 @@ namespace Gerenciador.Controllers
                 return View();
             }
         }
-
+        
         public ActionResult Consenso()
         {
             TempData["MensagemInfo"] = _servico.Consenso();

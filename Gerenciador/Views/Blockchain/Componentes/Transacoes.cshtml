@@ -1,0 +1,129 @@
+﻿@model BlockChain.Entidades.Bloco
+
+@{
+    ViewData["Title"] = "Bloco";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Cadastro</h3>
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="CriarBloco">
+
+            @await Html.PartialAsync("Componentes/Transacoes")
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class="btn btn-default" asp-action="Listagem">Voltar para listagem</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+@model IEnumerable<BlockChain.Entidades.Transacao>
+@*CADASTRO DE TRANSAÇÕES*@
+
+
+@*@{
+        object AdicionarTransacao()
+        {
+            Model.Add(new BlockChain.Entidades.Transacao
+            {
+                Destinatario = "Tetse",
+                Remetente = "tesersge",
+
+            });
+
+            return null;
+        }
+    }*@
+
+@*<div class="row">
+        <div class="col-md-12">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>Cadastrar transação</h3>
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Destinatário</label>
+                        <input type="text" asp-for="Destinatario" class="form-control" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Remetente</label>
+                        <input type="text" asp-for="Remetente" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <input onclick="@AdicionarTransacao()" value="Adicionar transação" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+<h4>Transações</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+
+
+        @*@if (Model.Count() > 0)
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Destinatário
+                            </th>
+
+                            <th>
+                                Remetente
+                            </th>
+                            <th>
+                                Ações
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="col-md-5">
+                                    @Html.DisplayFor(modelItem => item.Destinatario)
+                                </td>
+
+                                <td class="col-md-2">
+                                    @Html.DisplayFor(modelItem => item.Remetente)
+                                </td>
+
+                                <td class="col-md-3">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        @Html.ActionLink("Editar", "Edicao", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                                            @Html.ActionLink("Detalhes", "Detalhes", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                                            @Html.ActionLink("Excluir", "Exclusao", "Dispositivo", new { id = item.Id }, new { @class = "btn btn-default" })
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h4>Nenhuma transação cadastrada</h4>
+                    </div>
+                </div>
+            }*@
+
+    </div>
+</div>
+
+@*FIM DO CADASTRO DE TRANSAÇÕES*@

@@ -19,3 +19,4 @@ C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp
 C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.AssemblyInfo.cs
 C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.dll
 C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.csprojAssemblyReference.cache
