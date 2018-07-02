@@ -12,3 +12,17 @@ C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockCha
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.csproj.CopyComplete
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.dll
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Servico\obj\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\Servico.deps.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\Servico.runtimeconfig.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\Servico.runtimeconfig.dev.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\Servico.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\bin\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.csprojAssemblyReference.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.csproj.CoreCompileInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.AssemblyInfoInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.AssemblyInfo.cs
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.csproj.CopyComplete
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Servico\obj\Debug\netcoreapp2.1\Servico.pdb

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<BlockChain.Entidades.Transacao>
+
+@{
+    ViewBag.Title = "Transações";
+}
+
+<h2>Person List</h2>
+
+@using (Html.BeginForm("Transacoes", "Blockchain", FormMethod.Post))
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destinatario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remetente)
+                </th>
+            </tr>
+        </thead>
+        <tbody id="childtable">
+            @Html.EditorFor(model => Model)
+        </tbody>
+    </table>
+    <p>
+        <input name="command" type="submit" value="Add Item" />
+        <input name="command" type="submit" value="Remove Selected" />
+        <input name="command" type="submit" value="Cancel/Refresh" />
+    </p>
+    <p>
+        @Html.ValidationSummary()
+        <input name="command" type="submit" value="Submit" />
+    </p>
+}

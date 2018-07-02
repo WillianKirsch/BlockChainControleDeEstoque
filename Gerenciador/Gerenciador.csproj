@@ -23,4 +23,22 @@
     <ProjectReference Include="..\Servico\Servico.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Dispositivo\Cadastro.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Dispositivo\Detalhes.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Dispositivo\Edicao.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Dispositivo\Exclusao.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Dispositivo\Listagem.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

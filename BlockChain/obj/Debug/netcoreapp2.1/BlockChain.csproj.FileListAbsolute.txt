@@ -9,3 +9,14 @@ C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockCha
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.dll
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.pdb
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.csprojAssemblyReference.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\bin\Debug\netcoreapp2.1\BlockChain.deps.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\bin\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.Documentacao.Dicionario.resources
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.csproj.GenerateResource.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.csproj.CoreCompileInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.AssemblyInfoInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.AssemblyInfo.cs
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\BlockChain\obj\Debug\netcoreapp2.1\BlockChain.csprojAssemblyReference.cache

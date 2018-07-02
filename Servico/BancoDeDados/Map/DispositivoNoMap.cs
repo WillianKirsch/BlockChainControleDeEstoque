@@ -7,7 +7,10 @@ namespace Servico.BancoDeDados.Map
     {
         public DispositivoNoMap(EntityTypeBuilder<DispositivoNo> entityBuilder)
         {
-            //entityBuilder.Property(entidade => entidade.EnderecoUrl).HasMaxLength(400);
+            entityBuilder.HasKey(m => m.Id);
+            entityBuilder.Property(entidade => entidade.EnderecoUrl).HasMaxLength(400);
+            entityBuilder.Property(entidade => entidade.Erro).HasMaxLength(600);
+            
         }
     }
 }

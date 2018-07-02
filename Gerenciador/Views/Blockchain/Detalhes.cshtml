@@ -1,10 +1,12 @@
 ﻿@model BlockChain.Entidades.Bloco
 
 @{
-    ViewData["Title"] = "Detalhes";
+    ViewData["Title"] = "Bloco";
 }
 
-<h2>Detalhes</h2>
+<h1>@ViewData["Title"]</h1>
+
+<h3>Detalhes</h3>
 
 <div>
     <h4>Bloco - Altura @Html.DisplayFor(model => model.Altura)</h4>
@@ -55,5 +57,5 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Index">Voltar para listagem</a>
+    <a class="btn btn-default" asp-action="Listagem">Voltar para listagem</a>
 </div>

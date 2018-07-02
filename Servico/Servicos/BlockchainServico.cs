@@ -15,8 +15,7 @@ namespace Servico.Servicos
 {
     public class BlockchainServico : IBlockchainServico
     {
-        public string DispositivoNoId { get; private set; }
-
+        private const Int64 _provaInicial = 1;
         private readonly BlockchainClientContexto _contexto;
         protected BlockchainClientContexto Contexto { get { return _contexto; } }
         private Bloco _ultimoBloco => Contexto.Blocos.LastOrDefault();
@@ -27,9 +26,6 @@ namespace Servico.Servicos
 
             if (!Contexto.Blocos.Any())
                 CriarNovoBloco();
-
-            //TEMPORARIO
-            DispositivoNoId = Guid.NewGuid().ToString().Replace("-", "");
         }
 
         #region MÉTODOS PÚBLICOS
@@ -39,7 +35,7 @@ namespace Servico.Servicos
         public BlocoMineradoResposta SalvarTransacoes(List<Transacao> transacoes)
         {
             transacoes = new List<Transacao>();
-            transacoes.Add(CriarTransacao(destinatario: "0", remetente: DispositivoNoId, quantidade: 1));
+            //transacoes.Add();
 
             Bloco bloco = CriarNovoBloco(transacoes);
 
@@ -80,32 +76,43 @@ namespace Servico.Servicos
             return resultado.Substring(0, resultado.Length - 2);
         }
 
-        public ConsensoResposta Consenso()
+        public string Consenso()
         {
             bool alterado = ResolverConflitos();
-            string mensagem = alterado ? "foi alterada" : "está autorizada";
+            var mensagem = alterado ? "foi alterada" : "está autorizada";
 
-            return new ConsensoResposta
-            {
-                Mensagem = $"Nossa cadeia {mensagem}",
-                Cadeia = Contexto.Blocos.ToList()
-            };
+            return $"Nossa cadeia {mensagem}";
+        }
+
+        public string ValidarCadeia()
+        {
+            List<Bloco> blocos = ObterCadeiaCompleta().ToList();
+            
+            bool valida = CadeiaValida(blocos);
+            var mensagem = valida ? "está autorizada" : "foi alterada";
+
+            return $"Nossa cadeia {mensagem}";
+        }
+
+        public string RevalidarBloco(int id)
+        {
+            Bloco bloco = ObterBloco(id);
+            Bloco ultimoBloco = ObterBloco(id - 1);
+
+            string chaveBlocoAnterior = ultimoBloco?.Chave;
+            Int64 provaBlocoAnterior = ultimoBloco != null ? ultimoBloco.Prova : _provaInicial;
+
+            bloco.Chave = bloco.ObterChave();
+            bloco.Prova = CriarProva(bloco.Chave, chaveBlocoAnterior, provaBlocoAnterior);
+
+            Contexto.SaveChanges();
+
+            return "O bloco foi revalidado, caso tenha efetuado alguma alteração nesse bloco, todos os blocos estão inválidos, sendo assim necessário revalidar todos os blocos";
         }
 
         #endregion
 
         #region MÉTODOS PRIVADOS
-        private Transacao CriarTransacao(string destinatario, string remetente, int quantidade)
-        {
-            var transacao = new Transacao
-            {
-                Destinatario = destinatario,
-                Remetente = remetente,
-                Quantidade = quantidade
-            };
-
-            return transacao;
-        }
 
         private void RegistrarDispositivoNo(string endereco)
         {
@@ -115,22 +122,27 @@ namespace Servico.Servicos
         private bool CadeiaValida(List<Bloco> cadeia)
         {
             Bloco bloco = null;
-            Bloco ultimoBloco = cadeia.First();
-            int identificadorAtual = 1;
-            while (identificadorAtual < cadeia.Count)
+            Bloco blocoAnterior = null;
+            string chaveBlocoAnterior;
+            Int64 provaBlocoAnterior;
+
+            for (int blocoId = 0; blocoId < cadeia.Count; blocoId++)
             {
-                bloco = cadeia.ElementAt(identificadorAtual);
+                bloco = cadeia[blocoId];
+                blocoAnterior = blocoId > 0 ? cadeia[blocoId - 1] : null;
+
+                chaveBlocoAnterior = blocoAnterior?.Chave;
+                provaBlocoAnterior = blocoAnterior == null ? _provaInicial : blocoAnterior.Prova;
 
                 //Verifica se a Chave do bloco está correta
-                if (bloco.ChaveBlocoAnterior != ultimoBloco.ObterChave())
-                    return false;
+                if ((bloco.ChaveBlocoAnterior != null && blocoAnterior != null) && (bloco.ChaveBlocoAnterior != blocoAnterior.ObterChave()))
+                     return false;
 
                 //Verifica se a Prova está correta
-                if (!ProvaValida(bloco.Chave, ultimoBloco.ChaveBlocoAnterior, bloco.Prova, ultimoBloco.Prova))
+                if (!ProvaValida(bloco.Chave, bloco.ChaveBlocoAnterior, bloco.Prova, provaBlocoAnterior))
                     return false;
 
-                ultimoBloco = bloco;
-                identificadorAtual++;
+                blocoAnterior = bloco;
             }
 
             return true;
@@ -144,8 +156,21 @@ namespace Servico.Servicos
             foreach (DispositivoNo dispositivoNo in Contexto.Dispositivos)
             {
                 var url = new Uri(String.Concat(dispositivoNo.EnderecoUrl, "/cadeia"));
-                var requisicao = (HttpWebRequest)WebRequest.Create(url);
-                var resposta = (HttpWebResponse)requisicao.GetResponse();
+                HttpWebResponse resposta = null;
+
+                try
+                {
+                    var requisicao = (HttpWebRequest)WebRequest.Create(url);
+                    resposta = (HttpWebResponse)requisicao.GetResponse();
+                }
+                catch(Exception ex)
+                {
+                    DispositivoNo dispositivoParaSalvar = Contexto.Dispositivos.FirstOrDefault(no => no.Id == dispositivoNo.Id);
+                    dispositivoParaSalvar.Inacessivel = true;
+                    dispositivoParaSalvar.Erro = ex.Message;
+                    break;
+                }
+
 
                 if (resposta.StatusCode == HttpStatusCode.OK)
                 {
@@ -162,6 +187,14 @@ namespace Servico.Servicos
                         tamanhoMaximo = dados.cadeia.Count;
                         novaCadeia = dados.cadeia;
                     }
+
+                    dispositivoNo.Inacessivel = false;
+                    dispositivoNo.Erro = string.Empty;
+                }
+                else
+                {
+                    dispositivoNo.Inacessivel = true;
+                    dispositivoNo.Erro = String.Concat(resposta.StatusCode ," - ", resposta.StatusDescription);
                 }
             }
 
@@ -171,6 +204,8 @@ namespace Servico.Servicos
                 Contexto.SaveChanges();
                 return true;
             }
+            else
+                Contexto.SaveChanges();
 
             return false;
         }
@@ -178,7 +213,7 @@ namespace Servico.Servicos
         private Bloco CriarNovoBloco(List<Transacao> transacoes = null)
         {
             string chaveBlocoAnterior = _ultimoBloco?.Chave;
-            Int64 provaBlocoAnterior = _ultimoBloco != null ? _ultimoBloco.Prova : 1;
+            Int64 provaBlocoAnterior = _ultimoBloco != null ? _ultimoBloco.Prova : _provaInicial;
 
             Bloco bloco = new Bloco
             {

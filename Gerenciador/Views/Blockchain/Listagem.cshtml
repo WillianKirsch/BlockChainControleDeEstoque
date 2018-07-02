@@ -2,21 +2,38 @@
 
 @{
     ViewData["Title"] = "BlockChain";
+    var mensagemInfo = TempData["MensagemInfo"];
 }
 
 <h1>@ViewData["Title"]</h1>
-<h3>@ViewData["Mensagem"]</h3>
 
-<h2>Listagem</h2>
+@if (mensagemInfo != null)
+{
+    <div class="alert alert-info" role="alert">@mensagemInfo</div>
+}
 
-<p>
-    <a asp-action="CriarTransacoes">Nova transação</a>
-</p>
+<h3>Listagem</h3>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="navbar-form">
+                <a class="btn btn-primary" asp-action="CriarBloco" asp-controller="Bloco">Novo bloco</a>
+                <a class="btn btn-primary" asp-action="Consenso">Consenso</a>
+                <a class="btn btn-primary" asp-action="ValidarCadeia">Validar blockchain</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Altura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prova)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Bits)
@@ -39,23 +56,29 @@
         @foreach (var item in Model)
         {
         <tr>
-            <td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.Altura)
             </td>
-            <td>
+            <td class="col-md-1">
+                @Html.DisplayFor(modelItem => item.Prova)
+            </td>
+            <td class="col-md-1">
                 @Html.DisplayFor(modelItem => item.Bits)
             </td>
-            <td>
+            <td class="col-md-2">
                 @Html.DisplayFor(modelItem => item.Chave)
             </td>
-            <td>
+            <td class="col-md-2">
                 @Html.DisplayFor(modelItem => item.ChaveBlocoAnterior)
             </td>
-            <td>
+            <td class="col-md-2">
                 @Html.DisplayFor(modelItem => item.CriadoEm)
             </td>
-            <td>
-                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.Id })
+            <td class="col-md-3">
+                <div class="btn-group" role="group" aria-label="...">
+                    @Html.ActionLink("Revalidar", "RevalidarBloco", "Blockchain", new { id = item.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Detalhes", "Detalhes", "Blockchain", new { id = item.Id }, new { @class = "btn btn-default" })
+                </div>
             </td>
         </tr>
         }

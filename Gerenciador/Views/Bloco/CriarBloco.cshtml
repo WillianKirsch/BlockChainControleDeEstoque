@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BlockChain.Entidades.Transacao>
+
+@{
+    ViewBag.Title = "Transações";
+}
+
+<h2>Transações</h2>
+
+@using (Html.BeginForm("CriarBloco", "Bloco", FormMethod.Post))
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destinatario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remetente)
+                </th>
+            </tr>
+        </thead>
+        <tbody id="childtable">
+            @Html.EditorFor(model => Model)
+        </tbody>
+    </table>
+    <p>
+        <input name="command" type="submit" value="Add Item" />
+        <input name="command" type="submit" value="Remove Selected" />
+        <input name="command" type="submit" value="Cancel/Refresh" />
+    </p>
+    <p>
+        @Html.ValidationSummary()
+        <input name="command" type="submit" value="Submit" />
+    </p>
+}
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destinatario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Remetente)
+                </th>
+                <th>
+                    Ações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.Destinatario)
+                    </td>
+                    <td class="col-md-4">
+                        @Html.DisplayFor(modelItem => item.Remetente)
+                    </td>
+                   
+                    <td class="col-md-4">
+                        <div class="btn-group" role="group" aria-label="...">
+                            @Html.ActionLink("Revalidar", "RevalidarBloco", "Blockchain", new { id = item.Id }, new { @class = "btn btn-default" })
+                            @Html.ActionLink("Detalhes", "Detalhes", "Blockchain", new { id = item.Id }, new { @class = "btn btn-default" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

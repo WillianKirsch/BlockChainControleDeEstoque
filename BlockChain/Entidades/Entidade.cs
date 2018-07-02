@@ -1,7 +1,7 @@
 ﻿namespace BlockChain.Entidades
 {
-    public class Entidade
+    public class Entidade 
     {
-        public int Id { get; protected set; }
+        public int Id { get; set; }
     }
 }

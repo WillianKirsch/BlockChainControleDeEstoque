@@ -13017,11 +13017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
+      "projectUniqueName": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
       "projectName": "Gerenciador",
-      "projectPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
+      "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\Gerenciador.csproj",
       "packagesPath": "C:\\Users\\FlashThink\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\Gerenciador\\obj\\",
+      "outputPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Gerenciador\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13040,11 +13040,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj": {
-              "projectPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj"
+            "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj": {
+              "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\BlockChain\\BlockChain.csproj"
             },
-            "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj": {
-              "projectPath": "C:\\Users\\FlashThink\\Documents\\Visual Studio 2017\\Projects\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj"
+            "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj": {
+              "projectPath": "C:\\Users\\FlashThink\\GIT\\ContoleEstoqueBlockChain\\Servico\\Servico.csproj"
             }
           }
         }

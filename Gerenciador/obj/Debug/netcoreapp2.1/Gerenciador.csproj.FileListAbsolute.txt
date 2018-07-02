@@ -15,3 +15,20 @@ C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockCha
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csproj.CopyComplete
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.dll
 C:\Users\FlashThink\Documents\Visual Studio 2017\Projects\ContoleEstoqueBlockChain\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.deps.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.runtimeconfig.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.runtimeconfig.dev.json
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Gerenciador.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\BlockChain.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Servico.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\BlockChain.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\bin\Debug\netcoreapp2.1\Servico.pdb
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csprojAssemblyReference.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csproj.CoreCompileInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.AssemblyInfoInputs.cache
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.AssemblyInfo.cs
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.csproj.CopyComplete
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.dll
+C:\Users\Willian\GIT\BlockChainControleDeEstoque\Gerenciador\obj\Debug\netcoreapp2.1\Gerenciador.pdb
